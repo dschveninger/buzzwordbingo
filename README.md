@@ -1,6 +1,8 @@
 # Buzzword Bingo
 
-Different way to create Bingo cards based on a set of words.
+Different way to create bingo cards based on a set of words. To understand
+the Use case or requirements of Buzzword Bingo see the 
+[Use Case Docs](docs/usecases.md)
 
 ## History
 
