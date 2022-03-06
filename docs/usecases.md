@@ -20,9 +20,25 @@ requirements.
 ## Base Data Model
 
 In order for this application to work on many different environment
-we should define the data model that meets the Base Use Cases.
+we have defined the different persistance Entities using JSON Schema.
 
-todo: define data model.
+```todo: create schema.json files and link them here.```
+
+```todo: update Excel version to create a sheet that for email and update vbs```
+
+The major Entities of Buzzword Bingo are:
+
+1. All environments Entities:
+   1. Word list - the schema  to describe a word set that can be use in multiple games.
+2. Multi-user Environment Entities:
+   1. User - This is dependant of the environment and how authentication
+   is handled.
+   1. User Profile - Detail about the User that is not provide by an
+   environment.
+   1. Session - A game based on a word list that can be shared with
+   other Users.
+3. Temporary Entities:
+   1. Bingo Card Data - is a Schema of the data that make up a bingo card.
 
 ## Base Product Use Cases
 
