@@ -101,8 +101,8 @@ Row = 2
 
 ' loop through DataEntry list of emails
 Do
-    If Sheets("DataEntry").Cells(Row, 5).Value Like "*@*" Then
-        address = Sheets("DataEntry").Cells(Row, 5).Value
+    If Sheets("Participants").Cells(Row, 1).Value Like "*@*" Then
+        address = Sheets("Participants").Cells(Row, 1).Value
         CreateCard
         fileName = generateWorkbook
         ' todo method to email the PlayingCard only
