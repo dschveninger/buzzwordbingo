@@ -1,0 +1,6 @@
+---
+user_profile:
+  owner: Doug Schveninger
+  email: dschveninger@douganddiane.org
+  welcome_message: "Welcome"
+  extra_value: "should not pass validation"

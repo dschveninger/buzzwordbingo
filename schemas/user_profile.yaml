@@ -1,0 +1,25 @@
+---
+$schema: 'http://json-schema.org/draft-07/schema#'
+$id: 'https://github.com/dschveninger/buzzwordbingo/schemas/user_profile.yaml'
+type: 'object'
+required:
+  - user_profile
+additionalProperties: false
+properties:
+  schema:
+    type: 'string'
+    enum:
+      - 'buzzwordbingo/user_profile/v1'
+  user_profile:
+    type: 'object'
+    additionalProperties: false
+    required:
+      - email
+    properties:
+      email:
+        type: 'string'
+        minLength: 1
+      name:
+        type: 'string'
+        minLength: 1
+...

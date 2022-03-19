@@ -1,0 +1,5 @@
+---
+participants:
+  - name: Doug Schveninger
+    email: dschveninger@douganddiane.org
+    extra_data: "not define in the schema should fail schema validation"
