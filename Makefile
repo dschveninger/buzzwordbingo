@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := help
 PROJ_DIR := $(shell pwd)
 SHELL = /bin/bash
+MEGA_LINTER_IMAGE ?= megalinter/megalinter-documentation:v5
 
 # adjust this if the api is incremented
 
@@ -12,23 +13,26 @@ help: ## List the make targets supported
 
 ##@ Install - targets to install supporting software
 
-install:  install-plantuml install-yamllint ## install all dependances needed to develop
+install:  install-plantuml  ## install all dependencies needed to develop
 
 # TODO: will have to find a way to support mac, WSL2 (debian) and windows.
 install-plantuml: ## Url to install plantuml
-	@echo "see https://plantuml.com/download to install planatuml on your OS"
+	@echo "see https://plantuml.com/download to install plantuml on your OS"
 
-install-yamllint: ## Url to install yamllint
-	@echo " see https://www.mankier.com/1/yamllint#:~:text=sudo%20apt-get%20install%20yamllint%20On%20Mac%20OS%2010.11%2B%3A,pkg%20install%20py36-yamllint%20On%20OpenBSD%3A%20doas%20pkg_add%20py3-yamllint"
+##@ Quality Assurance - Quality Assurance targets to format, lint and test this repository
 
-##@ Quality Assurance
+qa: qa-lint  ## Run all QA targets on repository
 
-qa: qa-yamllint ## the tasks to make sure the repo meet Quality Assurance Standards
+qa-lint:  ## run Mega-linter using .mega-liner.yml config files
+	@docker run --rm -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
 
-qa-test-schema:  ## run Postive and Negative schema validation test cases.
-	@echo "TODO:  need to complete schema test data and install for schema validator"
+lint-fix:  ## run Mega-linter in fix mode
+	@docker run --rm -e APPLY_FIXES=all -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
 
-qa-yamllint: ## lint all yaml file in repo
-	@yamllint .
+lint-regex:  ## run Mega-linter against regex. make lint-arg REGEX={file or directory}
+	@docker run --rm -e FILTER_REGEX_INCLUDE=$(REGEX) -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
 
-.PHONY: help install install-plantuml qa qa-test-schema qa-yamllint
+lint-run:  ## run Mega-linter container in interactive mode
+	@docker run --rm -ti --entrypoint=/bin/bash -v ${PROJ_DIR}:/tmp/lint ${MEGA_LINTER_IMAGE}
+
+.PHONY: help install install-plantuml lint-fix lint-regex lint-run qa qa-lint

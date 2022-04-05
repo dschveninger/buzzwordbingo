@@ -20,7 +20,7 @@ requirements.
 ## Base Data Model
 
 In order for this application to work on many different environment
-we have defined the different persistance Entities using JSON Schema.
+we have defined the different persistence Entities using JSON Schema.
 
 ```todo: create schema.json files and link them here.```
 

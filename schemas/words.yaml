@@ -1,20 +1,19 @@
 ---
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id: 'https://github.com/dschveninger/buzzwordbingo/schemas/words.yaml'
-type: 'object'
+$schema: "http://json-schema.org/draft-07/schema#"
+$id: "https://github.com/dschveninger/buzzwordbingo/schemas/words.yaml"
+type: "object"
 required:
   - words
 additionalProperties: false
 properties:
   schema:
-    type: 'string'
+    type: "string"
     enum:
-      - 'buzzwordbingo/words/v1'
+      - "buzzwordbingo/words/v1"
   words:
-    type: 'array'
+    type: "array"
     minItems: 1
     items:
-      type: 'string'
+      type: "string"
       minLength: 1
       additionalProperties: false
-...
