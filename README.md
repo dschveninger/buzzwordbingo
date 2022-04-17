@@ -7,6 +7,7 @@ the Use case or requirements of Buzzword Bingo see the
 Makefile is the way we allow a developer to use this repo and interact with
 the development lifecycle commands. So you have to install [make](https://www.gnu.org/software/make/manual/)
 
+[![MegaLinter](https://github.com/dschveninger/buzzwordbingo/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/dschveninger/buzzwordbingo/actions?query=workflow%3AMegaLinter+branch%3Amain)
 ## History
 
 In order to keep my team interested in phone call meetings back in the 2000
