@@ -8,6 +8,7 @@ Makefile is the way we allow a developer to use this repo and interact with
 the development lifecycle commands. So you have to install [make](https://www.gnu.org/software/make/manual/)
 
 [![MegaLinter](https://github.com/dschveninger/buzzwordbingo/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/dschveninger/buzzwordbingo/actions?query=workflow%3AMegaLinter+branch%3Amain) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5e8bce49e0df4be8a880f2df02759d88)](https://app.codacy.com/gh/dschveninger/buzzwordbingo/dashboard?utm_source=github.com&utm_medium=referral&utm_content=dschveninger/buzzwordbingo&utm_campaign=Badge_Grade)
+
 ## History
 
 In order to keep my team interested in phone call meetings back in the 2000
@@ -26,7 +27,7 @@ todo: Need Use Cases Documentation
 
 ### Buzzword Bingo go CLI
 
-The [git submodule](../dougschveninger/howto/git/submodule.md) repo [buzzwordbingo-go-cli](../buzzwordbingo-go-cli/) is a local go CLI that work off a standard yaml word list. See the [buzzwordbingo-go-cli README.md](../buzzwordbingo-go-cli/README.md) for detail about the go CLI
+The [git submodule](https://github.com/dschveninger/dougschveninger/blob/main/howto/git/submodule.md) repo [buzzwordbingo-go-cli](https://github.com/dschveninger/buzzwordbingo-go-cli) is a local go CLI that work off a standard yaml word list. See the [buzzwordbingo-go-cli README.md](https://github.com/dschveninger/buzzwordbingo-go-cli/blob/main/README.md) for detail about the go CLI
 implementation
 
 ### Excel

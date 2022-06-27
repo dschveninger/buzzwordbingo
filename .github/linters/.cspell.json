@@ -13,7 +13,13 @@
     "Schveninger",
     "startuml",
     "substr",
+    "SARIF",
+    "codeql",
+    "compat",
+    "dylib",
+    "markdownlint",
+    "sarif",
+    "stefanzweifel",
     "usecases"
-  ],
-  "flagWords": ["hte"]
+  ]
 }
